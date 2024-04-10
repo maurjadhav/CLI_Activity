@@ -1,7 +1,15 @@
 #!/bin/bash
 
-tagName="Env"
-tagValue="Dev"
+# ensure number of arguments passed are two
+if [ $# -ne 2 ]; then
+   echo "You have passed wrong arguments"
+   echo "Pass the correct values in $0 as <tagName> <tagValue>"
+   exit 1
+fi
+
+
+tagName=$1
+tagValue=$2 
 
 
 # get all active regions for my account
